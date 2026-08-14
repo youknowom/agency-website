@@ -82,7 +82,7 @@ function Contact() {
 
           <div className="mt-8 space-y-4 text-sm text-slate-300">
             <p>[work@webcraft.com]</p>
-            <p>+91 8007861757</p>
+            <p>+91 8855801758</p>
             <p>Pune, MH</p>
           </div>
         </div>

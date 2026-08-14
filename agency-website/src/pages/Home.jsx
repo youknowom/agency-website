@@ -234,46 +234,7 @@ function Home() {
         <FAQ />
       </section>
 
-      {/* Final CTA Section */}
-      <section
-        id="contact"
-        className="py-24 text-white rounded-[2.5rem] mx-4 my-12 border border-white/5 bg-gradient-to-b from-[#161619]/90 to-[#0c0d0f]/90 relative overflow-hidden"
-        style={{
-          boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05)"
-        }}
-      >
-        {/* Glow halo inside card */}
-        <div className="absolute right-[-100px] bottom-[-100px] w-96 h-96 rounded-full blur-[100px] opacity-20 pointer-events-none bg-orange-500" />
-        
-        <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-between gap-10 px-6 text-center sm:px-8 lg:flex-row lg:text-left">
-          <div>
-            <p className="mb-3.5 text-xs font-bold uppercase tracking-[0.25em] text-orange-500">
-              Have a project in mind?
-            </p>
-            <h2 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight max-w-xl text-white">
-              Let's build something your customers will remember.
-            </h2>
-            <p className="mt-4 text-sm sm:text-base text-slate-400 max-w-lg leading-relaxed">
-              Tell us what you're working on and we'll figure out the next step together.
-            </p>
-          </div>
-          
-          <div className="flex flex-col items-center lg:items-start gap-4">
-            <Button
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-950 hover:bg-slate-100 font-extrabold text-sm rounded-full shadow-lg shadow-black/35"
-            >
-              Start a Project &rarr;
-            </Button>
-            <a 
-              href="mailto:hello@webcraftstudio.com" 
-              className="text-sm font-bold text-slate-300 hover:text-white underline underline-offset-4 decoration-orange-500/50"
-            >
-              hello@webcraftstudio.com
-            </a>
-          </div>
-        </div>
-      </section>
+      
     </>
   );
 }

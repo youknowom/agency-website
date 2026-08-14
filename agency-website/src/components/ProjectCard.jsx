@@ -1,4 +1,31 @@
-import Button from "./Button";
+import { 
+  SiNextdotjs, 
+  SiTypescript,
+  SiReact,
+  SiTailwindcss,
+  SiFigma
+} from "react-icons/si";
+import {
+  FaPenNib,
+  FaLaptopCode,
+  FaCompass,
+  FaPalette,
+  FaCartShopping
+} from "react-icons/fa6";
+
+// Map names to React Icons safely with branding color accents
+const iconMap = {
+  "Next.js": <SiNextdotjs className="text-white dark:text-white" />,
+  "React": <SiReact className="text-[#61DAFB]" />,
+  "Tailwind": <SiTailwindcss className="text-[#06B6D4]" />,
+  "TypeScript": <SiTypescript className="text-[#3178C6]" />,
+  "Figma": <SiFigma className="text-[#F24E1E]" />,
+  "Strategy": <FaCompass className="text-orange-500" />,
+  "UI/UX": <FaPenNib className="text-orange-500" />,
+  "Design": <FaPalette className="text-orange-500" />,
+  "Development": <FaLaptopCode className="text-orange-500" />,
+  "E-commerce": <FaCartShopping className="text-orange-500" />
+};
 
 function ProjectCard({
   title,
@@ -30,9 +57,10 @@ function ProjectCard({
             {technologies.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full border border-[var(--line)] bg-[var(--panel-alt)] px-3 py-1 text-[10px] font-semibold text-[var(--muted)]"
+                className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--panel-alt)] px-3 py-1 text-[10px] font-bold text-[var(--text)]"
               >
-                {tech}
+                <span className="flex items-center text-xs">{iconMap[tech] || <span>🛠️</span>}</span>
+                <span>{tech}</span>
               </span>
             ))}
           </div>

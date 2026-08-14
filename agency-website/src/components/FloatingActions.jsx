@@ -37,15 +37,15 @@ function FloatingActions() {
       </button>
 
       {/* WhatsApp Chat Button */}
-      <a
-        href="https://wa.me/91123456789"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/20 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 active:scale-95"
-        aria-label="Chat on WhatsApp"
-      >
-        <FaWhatsapp size={24} />
-      </a>
+     <a
+  href="https://wa.me/918855801758?text=Hi%2C%20I%27m%20interested%20in%20your%20services%20and%20would%20like%20to%20make%20an%20inquiry."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/20 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 active:scale-95"
+  aria-label="Chat on WhatsApp"
+>
+  <FaWhatsapp size={24} />
+</a>
     </div>
   );
 }
