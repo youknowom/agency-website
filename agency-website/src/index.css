@@ -1,1 +1,93 @@
 @import "tailwindcss";
+
+:root {
+  font-family: 'Plus Jakarta Sans', Inter, system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #111827;
+  background-color: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --page-bg: #ffffff;
+  --panel: #f9fafb;
+  --panel-alt: #f3f4f6;
+  --text: #111827;
+  --muted: #4b5563;
+  --line: rgba(17, 24, 39, 0.06);
+  --primary: #ff5a1f;
+  --secondary: #2563eb;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+}
+
+html.dark {
+  color: #f9fafb;
+  background-color: #030303;
+  --page-bg: #030303;
+  --panel: #0a0a0c;
+  --panel-alt: #101114;
+  --text: #f9fafb;
+  --muted: #9ca3af;
+  --line: rgba(255, 255, 255, 0.05);
+  --primary: #ff5a1f;
+  --secondary: #3b82f6;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--page-bg);
+  color: var(--text);
+  /* Pure warm orange gradient accents for light mode */
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(255, 90, 31, 0.03) 0%, transparent 45%),
+    linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+  background-attachment: fixed;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark body {
+  /* Pure warm orange gradient accents on charcoal black backdrop for dark mode */
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(255, 90, 31, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(255, 90, 31, 0.04) 0%, transparent 60%),
+    linear-gradient(180deg, #070709 0%, #030303 100%);
+  background-attachment: fixed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* iOS 26 Liquid Glass navbar animations */
+@keyframes glassSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
