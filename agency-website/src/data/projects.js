@@ -8,7 +8,7 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
     technologies: ["Strategy", "UI/UX", "Next.js"],
-    liveUrl: "https://example.com/northstar",
+    liveUrl: "https://google.com/",
     githubUrl: "https://github.com/",
   },
   {
@@ -20,7 +20,7 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
     technologies: ["UI/UX", "E-commerce", "Development"],
-    liveUrl: "https://example.com/luma",
+    liveUrl: "https://google.com/",
     githubUrl: "https://github.com/",
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
     image:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80",
     technologies: ["Strategy", "Design", "Development"],
-    liveUrl: "https://example.com/peakmotion",
+    liveUrl: "https://google.com/",
     githubUrl: "https://github.com/",
   },
 ];

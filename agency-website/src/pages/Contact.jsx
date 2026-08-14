@@ -81,9 +81,9 @@ function Contact() {
           </p>
 
           <div className="mt-8 space-y-4 text-sm text-slate-300">
-            <p>hello@webcraftstudio.com</p>
-            <p>+1 (415) 555-0147</p>
-            <p>San Francisco, CA</p>
+            <p>[work@webcraft.com]</p>
+            <p>+91 8007861757</p>
+            <p>Pune, MH</p>
           </div>
         </div>
 

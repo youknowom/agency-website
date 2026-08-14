@@ -10,6 +10,8 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
+import FloatingActions from "./components/FloatingActions";
+
 function AppContent() {
   useScrollTop();
 
@@ -27,6 +29,7 @@ function AppContent() {
         </Routes>
       </main>
       <Footer />
+      <FloatingActions />
     </div>
   );
 }

@@ -19,42 +19,69 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pointer-events-none">
-      {/* Floating glass pill navbar */}
+    <header className="fixed top-0 left-0 right-0 z-50 w-full flex justify-center">
+      {/* Native CSS transition style to keep morphing buttery smooth without layout projection */}
       <nav
-        className="pointer-events-auto mt-6 mx-4 flex items-center gap-1.5 px-3 py-2.5 transition-all duration-500 ease-out"
+        className="w-full flex items-center justify-between transition-all duration-300 ease-out"
         style={{
-          borderRadius: "9999px",
-          background: darkMode
-            ? "rgba(5, 5, 5, 0.4)"
-            : "rgba(255, 255, 255, 0.55)",
-          backdropFilter: "blur(24px) saturate(200%)",
-          WebkitBackdropFilter: "blur(24px) saturate(200%)",
-          border: `1px solid ${
-            darkMode
-              ? "rgba(255, 255, 255, 0.05)"
-              : "rgba(9, 9, 11, 0.06)"
-          }`,
+          // Spacing & shape morphing
+          maxWidth: scrolled ? "1024px" : "100%",
+          paddingLeft: scrolled ? "20px" : "32px",
+          paddingRight: scrolled ? "20px" : "32px",
+          paddingTop: scrolled ? "10px" : "18px",
+          paddingBottom: scrolled ? "10px" : "18px",
+          marginTop: scrolled ? "16px" : "0px",
+          borderRadius: scrolled ? "99px" : "0px",
+          marginLeft: scrolled ? "16px" : "0px",
+          marginRight: scrolled ? "16px" : "0px",
+          
+          // Background & Glass filters
+          background: scrolled
+            ? darkMode
+              ? "rgba(5, 5, 5, 0.45)"
+              : "rgba(255, 255, 255, 0.55)"
+            : darkMode
+              ? "#030303"
+              : "#ffffff",
+          backdropFilter: scrolled ? "blur(24px) saturate(180%)" : "none",
+          WebkitBackdropFilter: scrolled ? "blur(24px) saturate(180%)" : "none",
+          
+          // Borders
+          borderBottom: scrolled
+            ? `1px solid ${darkMode ? "rgba(255, 255, 255, 0.05)" : "rgba(9, 9, 11, 0.06)"}`
+            : `1px solid ${darkMode ? "rgba(255, 255, 255, 0.03)" : "rgba(9, 9, 11, 0.05)"}`,
+          borderLeft: scrolled
+            ? `1px solid ${darkMode ? "rgba(255, 255, 255, 0.05)" : "rgba(9, 9, 11, 0.06)"}`
+            : "1px solid transparent",
+          borderRight: scrolled
+            ? `1px solid ${darkMode ? "rgba(255, 255, 255, 0.05)" : "rgba(9, 9, 11, 0.06)"}`
+            : "1px solid transparent",
+          borderTop: scrolled
+            ? `1px solid ${darkMode ? "rgba(255, 255, 255, 0.05)" : "rgba(9, 9, 11, 0.06)"}`
+            : "1px solid transparent",
+
+          // Shadow
           boxShadow: scrolled
             ? darkMode
-              ? "0 12px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.02)"
-              : "0 12px 30px rgba(9, 9, 11, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.8)"
-            : darkMode
-              ? "0 4px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.01)"
-              : "0 4px 20px rgba(9, 9, 11, 0.01), inset 0 1px 0 rgba(255, 255, 255, 0.6)",
-          transform: scrolled ? "scale(0.98)" : "scale(1)",
+              ? "0 12px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.02)"
+              : "0 12px 30px rgba(9, 9, 11, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8)"
+            : "none",
         }}
       >
         {/* Logo */}
         <Link
           to="/"
-          className="flex items-center gap-2 pl-2 pr-3"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="flex items-center gap-2"
           aria-label="WebCraft Studio home"
         >
           <WLogo size={32} />
@@ -63,31 +90,21 @@ function Navbar() {
           </span>
         </Link>
 
-        {/* Divider */}
-        <div
-          className="hidden md:block h-6 w-px mx-1 bg-[var(--line)]"
-        />
-
         {/* Desktop nav links */}
-        <div className="hidden items-center gap-0.5 md:flex">
+        <div className="hidden items-center gap-1 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.name}
               to={item.href}
-              className="relative px-3.5 py-2 text-sm font-semibold rounded-full transition-colors text-[var(--muted)] hover:text-[var(--text)] hover:bg-[var(--panel-alt)]"
+              className="px-4 py-2 text-sm font-semibold rounded-full transition-colors text-[var(--muted)] hover:text-[var(--text)] hover:bg-[var(--panel-alt)]"
             >
               {item.name}
             </Link>
           ))}
         </div>
 
-        {/* Divider */}
-        <div
-          className="hidden md:block h-6 w-px mx-1 bg-[var(--line)]"
-        />
-
         {/* Desktop actions */}
-        <div className="hidden items-center gap-1.5 md:flex">
+        <div className="hidden items-center gap-3 md:flex">
           <button
             type="button"
             onClick={toggleTheme}
@@ -102,7 +119,7 @@ function Navbar() {
           </button>
           <Link
             to="/contact"
-            className="rounded-full px-4 py-2 text-sm font-bold text-white transition-all duration-300 hover:opacity-95"
+            className="rounded-full px-5 py-2 text-sm font-bold text-white transition-all duration-300 hover:opacity-95"
             style={{
               background: "var(--primary)",
               boxShadow: "0 2px 12px rgba(255, 90, 31, 0.2)",
@@ -126,25 +143,12 @@ function Navbar() {
       {/* Mobile dropdown */}
       {mobileOpen && (
         <div
-          className="pointer-events-auto absolute top-[calc(100%+0.25rem)] left-4 right-4 p-3 md:hidden"
+          className="absolute top-full left-0 right-0 w-full bg-[var(--page-bg)] px-6 py-4 md:hidden border-b border-[var(--line)] shadow-lg"
           style={{
-            borderRadius: "1.5rem",
-            background: darkMode
-              ? "rgba(9, 9, 11, 0.75)"
-              : "rgba(255, 255, 255, 0.8)",
-            backdropFilter: "blur(20px) saturate(180%)",
-            WebkitBackdropFilter: "blur(20px) saturate(180%)",
-            border: `1px solid ${
-              darkMode
-                ? "rgba(255, 255, 255, 0.08)"
-                : "rgba(9, 9, 11, 0.06)"
-            }`,
-            boxShadow: darkMode
-              ? "0 12px 48px rgba(0, 0, 0, 0.5)"
-              : "0 12px 48px rgba(9, 9, 11, 0.08)",
+            animation: "slideDown 0.3s ease-out"
           }}
         >
-          <div className="flex flex-col gap-0.5">
+          <div className="flex flex-col gap-1">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -157,9 +161,9 @@ function Navbar() {
             ))}
           </div>
 
-          <div className="my-2 h-px bg-[var(--line)]" />
+          <div className="my-3 h-px bg-[var(--line)]" />
 
-          <div className="flex items-center gap-2 px-1">
+          <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={toggleTheme}
@@ -177,7 +181,7 @@ function Navbar() {
               onClick={() => setMobileOpen(false)}
               className="flex-1 rounded-xl px-3 py-2.5 text-center text-sm font-bold text-white bg-[var(--primary)]"
             >
-              Start a Project
+              Let's Connect
             </Link>
           </div>
         </div>

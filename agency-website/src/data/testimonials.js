@@ -1,20 +1,20 @@
 export const testimonials = [
   {
-    name: "Alicia Morgan",
-    role: "Founder, Northstar Labs",
+    name: "Elon Musk",
+    role: "CEO, SpaceX",
     quote:
-      "“WebCraft completely changed how our business presents itself online. The new website finally feels like us.”",
+      "The process was simple, communication was great, and the final website looked better than we imagined.",
   },
   {
-    name: "Daniel Brooks",
-    role: "Marketing Director, Luma Atelier",
+    name: "Sam Altman",
+    role: "CEO, OpenAI",
     quote:
-      "“The process was simple, communication was great, and the final website looked better than we imagined.”",
+      "WebCraft completely changed how our business presents itself online. The new website finally feels like us.",
   },
   {
-    name: "Priya Shah",
-    role: "Founder, PeakMotion",
+    name: "Bill Gates",
+    role: "Founder, Microsoft",
     quote:
-      "“They understood the product instead of just designing screens. That made a huge difference.”",
+      "This is a great website for our business. I love the design and features.",
   },
 ];

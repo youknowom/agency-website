@@ -7,12 +7,18 @@ function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-2">
           <div className="mb-4 flex items-center gap-3">
-            <WLogo size={36} />
-            <div>
-              <p className="text-lg font-black tracking-tight text-[var(--text)]">
-                WebCraft
-              </p>
-            </div>
+            <Link
+              to="/"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="flex items-center gap-3"
+            >
+              <WLogo size={36} />
+              <div>
+                <p className="text-lg font-black tracking-tight text-[var(--text)]">
+                  WebCraft
+                </p>
+              </div>
+            </Link>
           </div>
           <p className="max-w-md text-sm leading-7 text-[var(--muted)]">
             A digital agency designing and building websites, web applications, and digital experiences for ambitious businesses.
