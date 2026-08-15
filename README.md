@@ -1,14 +1,10 @@
 <p align="left">
-  <img src="./agency-website/public/favicon.png" alt="WebCraft Logo" width="64" height="64" />
+  <img src="./agency-website/public/favicon.png" alt="WebCraft Logo" width="48" height="48" />
+  &nbsp;&nbsp;
+  <strong>WebCraft Studio</strong>
+  &nbsp;—&nbsp;
+  Turn your ideas into digital reality.
 </p>
-
-# WebCraft Studio
-
-> **Turn your ideas into digital reality.**
-
-A modern, high-performance digital agency website engineered with React, Vite, and Tailwind CSS.
-
-🌐 **Live Demo:** https://web-craft-omkar.vercel.app/
 
 ---
 
