@@ -22,7 +22,7 @@ function Home() {
         <SectionTitle
           eyebrow="What we do"
           title="Your website should do more than look good."
-          description="It should explain what you do, build trust, and make it easy for people to choose you. We combine strategy, design, and development to create digital experiences that do exactly that."
+          description="It should explain what you do, build trust, and make choosing you easy. We combine strategy, design, and development to create digital experiences that deliver."
         />
 
         {/* 3 Capabilities */}
@@ -85,7 +85,7 @@ function Home() {
       {/* Process Section */}
       <section
         id="process"
-        className="mx-auto max-w-7xl px-4 py-28 sm:px-6 lg:px-8 border-t border-[var(--line)]"
+        className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 border-t border-[var(--line)]"
       >
         <SectionTitle
           eyebrow="Our process"
@@ -93,38 +93,106 @@ function Home() {
           description="We use a transparent, collaborative roadmap to ensure your project stays on track and launches cleanly."
         />
 
-        {/* 4 Process steps */}
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="relative">
-            <div className="text-4xl font-black text-orange-500/20 mb-4">01</div>
-            <h3 className="text-lg font-bold text-[var(--text)]">Discover</h3>
-            <p className="mt-2 text-sm text-[var(--muted)] leading-relaxed">
-              We understand your business, audience, goals, and what needs to be solved.
-            </p>
-          </div>
+        {/* Process Timeline */}
+        <div className="relative mt-12">
+          {/* Connecting Line (Desktop) */}
+          <div className="absolute top-[16px] left-0 right-0 h-[1px] bg-zinc-200 dark:bg-zinc-800 hidden lg:block z-0" />
+          
+          {/* Connecting Line (Mobile) */}
+          <div className="absolute left-[9px] top-4 bottom-4 w-[1px] bg-zinc-200 dark:bg-zinc-800 lg:hidden z-0" />
 
-          <div className="relative">
-            <div className="text-4xl font-black text-orange-500/20 mb-4">02</div>
-            <h3 className="text-lg font-bold text-[var(--text)]">Design</h3>
-            <p className="mt-2 text-sm text-[var(--muted)] leading-relaxed">
-              We create the visual direction, user experience, and interface.
-            </p>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-8 relative z-10">
+            {/* Step 1 */}
+            <div className="relative pl-8 lg:pl-0 pt-0 lg:pt-8 group">
+              {/* Dot on connecting line */}
+              <div className="absolute left-[5px] lg:left-0 top-[12px] lg:top-[12px] w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 group-hover:bg-orange-500 transition-all duration-300 z-20 ring-4 ring-[var(--page-bg)]" />
+              
+              {/* Integrated large faded number */}
+              <div className="text-5xl lg:text-6xl font-black tracking-tight text-zinc-200 dark:text-zinc-800/50 group-hover:text-orange-500/20 transition-colors duration-500 select-none mb-3 font-mono leading-none">
+                01
+              </div>
 
-          <div className="relative">
-            <div className="text-4xl font-black text-orange-500/20 mb-4">03</div>
-            <h3 className="text-lg font-bold text-[var(--text)]">Build</h3>
-            <p className="mt-2 text-sm text-[var(--muted)] leading-relaxed">
-              We turn the approved design into a fast, responsive, production-ready website or application.
-            </p>
-          </div>
+              <div className="transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
+                <h3 className="text-lg lg:text-xl font-bold text-[var(--text)] flex items-center gap-2">
+                  Discover
+                  <span className="inline-block transition-all duration-300 ease-out opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 text-orange-500 text-sm">
+                    →
+                  </span>
+                </h3>
+                <p className="mt-2 text-sm text-[var(--muted)] leading-relaxed">
+                  We understand your business, audience, goals, and what needs to be solved.
+                </p>
+              </div>
+            </div>
 
-          <div className="relative">
-            <div className="text-4xl font-black text-orange-500/20 mb-4">04</div>
-            <h3 className="text-lg font-bold text-[var(--text)]">Launch</h3>
-            <p className="mt-2 text-sm text-[var(--muted)] leading-relaxed">
-              We test everything, deploy it, and make sure your new digital experience is ready for the real world.
-            </p>
+            {/* Step 2 */}
+            <div className="relative pl-8 lg:pl-0 pt-0 lg:pt-8 group">
+              {/* Dot on connecting line */}
+              <div className="absolute left-[5px] lg:left-0 top-[12px] lg:top-[12px] w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 group-hover:bg-orange-500 transition-all duration-300 z-20 ring-4 ring-[var(--page-bg)]" />
+              
+              {/* Integrated large faded number */}
+              <div className="text-5xl lg:text-6xl font-black tracking-tight text-zinc-200 dark:text-zinc-800/50 group-hover:text-orange-500/20 transition-colors duration-500 select-none mb-3 font-mono leading-none">
+                02
+              </div>
+
+              <div className="transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
+                <h3 className="text-lg lg:text-xl font-bold text-[var(--text)] flex items-center gap-2">
+                  Design
+                  <span className="inline-block transition-all duration-300 ease-out opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 text-orange-500 text-sm">
+                    →
+                  </span>
+                </h3>
+                <p className="mt-2 text-sm text-[var(--muted)] leading-relaxed">
+                  We create the visual direction, user experience, and interface.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="relative pl-8 lg:pl-0 pt-0 lg:pt-8 group">
+              {/* Dot on connecting line */}
+              <div className="absolute left-[5px] lg:left-0 top-[12px] lg:top-[12px] w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 group-hover:bg-orange-500 transition-all duration-300 z-20 ring-4 ring-[var(--page-bg)]" />
+              
+              {/* Integrated large faded number */}
+              <div className="text-5xl lg:text-6xl font-black tracking-tight text-zinc-200 dark:text-zinc-800/50 group-hover:text-orange-500/20 transition-colors duration-500 select-none mb-3 font-mono leading-none">
+                03
+              </div>
+
+              <div className="transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
+                <h3 className="text-lg lg:text-xl font-bold text-[var(--text)] flex items-center gap-2">
+                  Build
+                  <span className="inline-block transition-all duration-300 ease-out opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 text-orange-500 text-sm">
+                    →
+                  </span>
+                </h3>
+                <p className="mt-2 text-sm text-[var(--muted)] leading-relaxed">
+                  We turn the approved design into a fast, responsive, production-ready website or application.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="relative pl-8 lg:pl-0 pt-0 lg:pt-8 group">
+              {/* Dot on connecting line */}
+              <div className="absolute left-[5px] lg:left-0 top-[12px] lg:top-[12px] w-2.5 h-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 group-hover:bg-orange-500 transition-all duration-300 z-20 ring-4 ring-[var(--page-bg)]" />
+              
+              {/* Integrated large faded number */}
+              <div className="text-5xl lg:text-6xl font-black tracking-tight text-zinc-200 dark:text-zinc-800/50 group-hover:text-orange-500/20 transition-colors duration-500 select-none mb-3 font-mono leading-none">
+                04
+              </div>
+
+              <div className="transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
+                <h3 className="text-lg lg:text-xl font-bold text-[var(--text)] flex items-center gap-2">
+                  Launch
+                  <span className="inline-block transition-all duration-300 ease-out opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 text-orange-500 text-sm">
+                    →
+                  </span>
+                </h3>
+                <p className="mt-2 text-sm text-[var(--muted)] leading-relaxed">
+                  We test everything, deploy it, and make sure your new digital experience is ready for the real world.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -193,7 +261,7 @@ function Home() {
         <SectionTitle
           eyebrow="Selected work"
           title="A few projects we're proud of."
-          description="A curated showcase of branding systems, landing pages, and web applications built for business impact."
+          description="A curated showcase of branding, websites, and web apps built for real business impact."
         />
         <div className="mt-16 grid gap-8 lg:grid-cols-3">
           {projects.map((project) => (

@@ -8,7 +8,7 @@ function Projects() {
       <SectionTitle
         eyebrow="Projects"
         title="Growth stories from teams we’ve helped"
-        description="A curated look at the brand systems, campaigns, and product experiences we’ve built for growing businesses."
+        description="A curated showcase of branding, websites, and web apps built for real business impact."
       />
       <div className="mt-12 grid gap-8 lg:grid-cols-3">
         {projects.map((project) => (

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import InteractiveGrid from "./InteractiveGrid";
 
 function Hero() {
   return (
@@ -16,8 +17,8 @@ function Hero() {
         />
       </div>
 
-      {/* Subtle gateway grid lines in the background */}
-      <div className="absolute inset-0 z-0 pointer-events-none opacity-5 dark:opacity-[0.03] bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+      {/* Interactive grid canvas — replaces static CSS grid */}
+      <InteractiveGrid />
 
       {/* Content Container */}
       <div className="relative z-10 mx-auto max-w-4xl flex flex-col items-center">

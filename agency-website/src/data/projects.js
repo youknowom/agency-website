@@ -1,38 +1,40 @@
+import codeTreeImg from "../assets/images/code-tree.png";
+import aiVerifySnapImg from "../assets/images/ai-verify-snap.png";
+import eventOrgImg from "../assets/images/event-org.png";
+
 export const projects = [
   {
-    title: "Northstar Labs",
-    category: "SaaS Website",
+    title: "CodeTree",
+    category: "EdTech Platform",
     description:
-      "A complete website redesign that gave a growing SaaS company a clearer message and a stronger digital presence.",
+      "An interactive coding platform with a live editor, gamified learning paths, and structured courses covering HTML, CSS, JavaScript, React, Python, and Gen AI.",
     stat: "Strategy · UI/UX · Next.js",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+    image: codeTreeImg,
     technologies: ["Strategy", "UI/UX", "Next.js"],
-    liveUrl: "https://google.com/",
-    githubUrl: "https://github.com/",
+    liveUrl: "https://code-tree.vercel.app/",
+    githubUrl: "https://github.com/youknowom/code-Tree",
   },
   {
-    title: "Luma Atelier",
-    category: "E-commerce",
+    title: "AI Verify Snap",
+    category: "AI / SaaS Product",
     description:
-      "A premium online storefront designed to improve product discovery, mobile usability, and the overall shopping experience.",
-    stat: "UI/UX · E-commerce · Development",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
-    technologies: ["UI/UX", "E-commerce", "Development"],
-    liveUrl: "https://google.com/",
-    githubUrl: "https://github.com/",
+      "An AI-powered deepfake detection and image forensic analysis platform featuring dual-stream ResNet, ELA heatmaps, and enterprise-grade identity protection.",
+    stat: "Design · AI/ML · Next.js",
+    image: aiVerifySnapImg,
+    technologies: ["Design", "AI/ML", "Next.js"],
+    liveUrl: "https://ai-verify-snap.vercel.app/",
+    githubUrl: "https://github.com/youknowom/ai-verify-snap",
   },
   {
-    title: "PeakMotion",
-    category: "Marketing Website",
+    title: "Spott",
+    category: "Event Management Platform",
     description:
-      "A high-converting campaign website designed to communicate a new product clearly and generate qualified leads.",
+      "A modern all-in-one event management platform to create, manage, and scale events with ticket management, analytics dashboards, and automated notifications.",
     stat: "Strategy · Design · Development",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80",
+    image: eventOrgImg,
     technologies: ["Strategy", "Design", "Development"],
-    liveUrl: "https://google.com/",
-    githubUrl: "https://github.com/",
+    liveUrl: "https://spott-event-org.vercel.app/",
+    githubUrl: "https://github.com/youknowom/event-org",
   },
 ];
+
