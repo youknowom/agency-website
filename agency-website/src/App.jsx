@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 import FloatingActions from "./components/FloatingActions";
+import { Toaster } from "react-hot-toast";
 
 function AppContent() {
   useScrollTop();
@@ -30,6 +31,18 @@ function AppContent() {
       </main>
       <Footer />
       <FloatingActions />
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            borderRadius: "16px",
+            padding: "14px 20px",
+            fontSize: "14px",
+            fontWeight: "500",
+          },
+        }}
+      />
     </div>
   );
 }

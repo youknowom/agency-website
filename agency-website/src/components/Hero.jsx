@@ -9,7 +9,7 @@ function Hero() {
     >
       {/* Mesh Gradient glowing halo in the center matching primary brand orange */}
       <div className="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
-        <div 
+        <div
           className="w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] rounded-full blur-[100px] sm:blur-[160px] opacity-20 dark:opacity-30"
           style={{
             background: "radial-gradient(circle, #ff5a1f 0%, transparent 60%)",
@@ -22,9 +22,9 @@ function Hero() {
 
       {/* Content Container */}
       <div className="relative z-10 mx-auto max-w-4xl flex flex-col items-center">
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-orange-500/20 bg-orange-500/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-orange-500">
+        {/* <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-orange-500/20 bg-orange-500/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-orange-500">
           Web Design &middot; Development &middot; Digital Products
-        </div>
+        </div> */}
 
         <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-[var(--text)] leading-[1.05] max-w-3xl">
           We build websites
@@ -35,10 +35,11 @@ function Hero() {
         </h1>
 
         <p className="mt-8 max-w-2xl text-base sm:text-lg text-[var(--muted)] leading-relaxed">
-          WebCraft is a digital agency helping startups and businesses design, build, and launch websites that look great, perform fast, and turn visitors into customers.
+          WebCraft is a digital agency helping startups and businesses design,
+          build, and launch websites that look great, perform fast, and turn
+          visitors into customers.
         </p>
 
-        
         <div className="mt-12 text-xs font-bold uppercase tracking-[0.25em] text-[var(--muted)] opacity-85">
           Strategy &middot; Design &middot; Development &middot; Launch
         </div>
